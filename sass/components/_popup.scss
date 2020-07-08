@@ -22,6 +22,10 @@
         opacity: 0;
         transform: translate(-50%, -50%) scale(.25);
         transition: all .5s .2s;
+
+        @include respond(tablet-port){
+            width: 100%;
+        }
     }
 
     &__left {
@@ -37,8 +41,11 @@
     }
 
     &__img {
-        display: block;
-        width: 100%;
+        &--1,
+        &--2 {
+            display: block;
+            width: 100%;
+        }
     }
 
     &__text{
@@ -57,6 +64,15 @@
         -ms-hyphens: auto;
         -webkit-hyphens: auto;
         hyphens: auto;
+
+        @include respond(tablet-land) {
+            -moz-column-count: 1;
+            column-count: 1;
+        }
+    
+        @include respond(phone) {
+            font-size: 2.5rem;
+        }
     }
 
     // OPEN STATE
@@ -86,6 +102,48 @@
 
         &:hover {
             color: $color-primary;
+        }
+    }
+
+    @include respond(tablet-land) {
+        &__left {
+            position: relative;
+        }
+
+        &__img {
+            &--1{
+                transform: scale(.8);
+                position: absolute;
+                top: 5%;
+                left: 0;
+            }
+            &--2 {
+                transform: scale(.85);
+                position: absolute;
+                top: 35%;
+                left: 10%;
+            }
+        }
+    }
+
+    @include respond(tablet-port) {
+        &__img {
+            &--1{
+                transform: scale(.7);
+                top: 5%;
+                left: 0;
+            }
+            &--2 {
+                transform: scale(.75);
+                top: 35%;
+                left: 10%;
+            }
+        }
+    }
+
+    @include respond(phone) {
+        &__left {
+            display: none;
         }
     }
 }

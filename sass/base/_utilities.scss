@@ -8,10 +8,26 @@
 
 .u-margin-bottom-medium {
     margin-bottom: 4rem !important;
+
+    @include respond(tablet-land){
+        margin-bottom: 3.5rem !important;
+    }
+
+    @include respond(tablet-port){
+        margin-bottom: 3rem !important;
+    }
 }
 
 .u-margin-bottom-big {
     margin-bottom: 8rem !important;
+
+    @include respond(tablet-land){
+        margin-bottom: 6rem !important;
+    }
+
+    @include respond(tablet-port){
+        margin-bottom: 5rem !important;
+    }
 }
 
 .u-margin-top-big {
