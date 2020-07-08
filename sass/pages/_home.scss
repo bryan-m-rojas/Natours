@@ -33,6 +33,10 @@
     padding: 25rem 0 15rem 0;
     margin-top: -10rem;
 
+    @include respond(tablet-land){
+        padding: 22rem 0 12rem 0rem;
+    }
+    
     @include respond(tablet-port){
         padding: 20rem 0 10rem 0rem;
     }
@@ -41,6 +45,10 @@
 .section-stories {
     padding: 15rem 0;
     position: relative;
+
+    @include respond(tablet-land){
+        padding: 12rem 0 12rem 0rem;
+    }
 
     @include respond(tablet-port){
         padding: 10rem 0;
@@ -54,6 +62,10 @@
         $color-primary-light, 
         $color-primary-dark); 
 
+    @include respond(tablet-land){
+        padding: 12rem 0 12rem 0rem;
+    }
+    
     @include respond(tablet-port){
         padding: 10rem 0;
     }
